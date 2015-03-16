@@ -25,7 +25,7 @@
   excludesfile = ~/.gitignore
   autocrlf = input
 [merge]
-  ff = only
+#  ff = only
 [commit]
   template = ~/.gitmessage
 [fetch]
