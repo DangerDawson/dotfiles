@@ -1,0 +1,5 @@
+# Productivity
+alias todo='$EDITOR ~/.todo'
+
+# Project
+alias ec='cd $HOME/watg/ecom_site'

@@ -1,0 +1,19 @@
+" ================ Appearance ==================
+Plugin 'skwp/vim-colors-solarized'
+Plugin 'powerline/powerline'
+Plugin 'stephenmckinney/vim-solarized-powerline'
+
+" ================ NerdTree ==================
+Plugin 'scrooloose/nerdtree.git'
+
+
+" ================ Shell ==================
+Plugin 'tpope/vim-dispatch'
+
+" ================ TMUX ==================
+Plugin 'jgdavey/tslime.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+
+" ================ Search ==================
+Plugin 'rking/ag.vim'
+
