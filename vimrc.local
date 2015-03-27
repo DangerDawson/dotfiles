@@ -61,14 +61,17 @@ set linebreak    "Wrap lines at convenient points
 " ================ Running Specs ========================
 "let g:rspec_command = "./spec {spec}"
 "let g:rspec_command = "Dispatch ./spec {spec}"
+" If you have issues then reset slime by
+" unlet g:tslime
 let g:rspec_command = 'call Send_to_Tmux("./spec {spec}\n")'
 "let g:rspec_runner = "os_x_iterm"
 
 
 " ================ Syntastic ========================
+"let g:syntastic_ruby_checkers = ['mri','rubocop']
 let g:syntastic_ruby_checkers = ['mri']
 nnoremap <Leader>rc :SyntasticCheck rubocop<CR>
-
+nnoremap <Leader>wrc :w<CR> :SyntasticCheck rubocop<CR>
 
 " ================ Search  ========================
 function! GetVisual()

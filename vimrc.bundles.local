@@ -17,3 +17,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 " ================ Search ==================
 Plugin 'rking/ag.vim'
 
+
+" ================ Language ==================
+Plugin 'jiangmiao/auto-pairs'
