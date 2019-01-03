@@ -1,8 +1,15 @@
 [alias]
   l = log --pretty=colored
   lg = log --graph --oneline --decorate --date=relative --all
+  gui = !sh -c '/usr/local/opt/git/libexec/git-core/git-gui'
+  slog = log --no-merges --pretty=format:\"%h  %Cblue%<(15)%an%Creset %Cgreen%s%Creset\"
+  recent-branches="!git for-each-ref --sort=-committerdate --count=20 --format='%(refname:short)' refs/heads/"
 [pretty]
   colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
 [user]
   name = David Dawson
   email = david.dawson@gmail.com
+[url "https://github.com"]
+	insteadOf = git://github.com
+[gui]
+	commitmsgwidth = 80

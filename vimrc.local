@@ -12,6 +12,7 @@ set clipboard=unnamed
 
 " ================ Appearance ========================
 colorscheme solarized
+set background=dark
 if has('gui_running')
     set background=dark
 else
@@ -32,6 +33,7 @@ let mapleader = ","
 " Cmd-Shift-N for nerd tree
 nmap <D-N> :NERDTreeToggle<CR>
 nmap <Leader>nt :NERDTreeToggle<CR>
+nmap <Leader>n :NERDTreeFind<CR>
 
 " ================ CtrlP ========================
 let g:ctrlp_map = ',t'
@@ -57,21 +59,24 @@ set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
 
-
 " ================ Running Specs ========================
 "let g:rspec_command = "./spec {spec}"
 "let g:rspec_command = "Dispatch ./spec {spec}"
 " If you have issues then reset slime by
 " unlet g:tslime
 let g:rspec_command = 'call Send_to_Tmux("./spec {spec}\n")'
-"let g:rspec_runner = "os_x_iterm"
+"let g:rspec_runner = "os_x_iterm2"
 
 
 " ================ Syntastic ========================
 "let g:syntastic_ruby_checkers = ['mri','rubocop']
 let g:syntastic_ruby_checkers = ['mri']
+let g:syntastic_ruby_mri_exec = '/usr/local/bin/ruby'
+let g:syntastic_mode_map = { 'passive_filetypes': ['sass', 'scss']  }
 nnoremap <Leader>rc :SyntasticCheck rubocop<CR>
 nnoremap <Leader>wrc :w<CR> :SyntasticCheck rubocop<CR>
+let g:vimrubocop_keymap = 0
+nnoremap <Leader>ra :RuboCop -a<CR>
 
 " ================ Search  ========================
 function! GetVisual()
@@ -116,3 +121,6 @@ nnoremap ,gcp :AgCurrentPartial<CR>
 
 "Grep for usages of the current file
 nnoremap ,gcf :exec "Ag " . expand("%:t:r")<CR>
+
+"Enable syntax highlight for flow
+let g:javascript_plugin_flow = 1

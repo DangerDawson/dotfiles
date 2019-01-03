@@ -20,3 +20,10 @@ Plugin 'rking/ag.vim'
 
 " ================ Language ==================
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tomlion/vim-solidity'
+
+Plugin 'ngmy/vim-rubocop'
+
+Plugin 'tpope/vim-projectionist'

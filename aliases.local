@@ -2,4 +2,7 @@
 alias todo='$EDITOR ~/.todo'
 
 # Project
-alias ec='cd $HOME/watg/ecom_site'
+alias cy='cd $HOME/cyg/cygnetise'
+alias be="bundle exec"
+alias h="hanami"
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
